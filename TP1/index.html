@@ -1,20 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Datos karting 2024-2025</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progresión Karting 2024-2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: #f5f6fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h2 {
+      margin-top: 3rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #1f2937;
+      border-left: 5px solid #2563eb;
+      padding-left: 10px;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-top: 1rem;
+    }
+
+    iframe, object, .flourish-embed {
+      width: 100% !important;
+      border: none;
+      margin-top: 1rem;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding: 1.5rem;
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
-  <body>
-    <h1>Progreción karting 2024-2025</h1>
-    <h2>¿Como avanza la velocidad maxima en base a la temperatura de gases de escape y que piloto aprovecha mas dichas temperaturas?</h2>
-       <div class="flourish-embed flourish-scatter" data-src="visualisation/26636747"><script src="https://public.flourish.studio/resources/embed.js"></script>
-       <noscript><img src="https://public.flourish.studio/visualisation/26636747/thumbnail" width="100%" alt="scatter visualization" /></noscript>
-       </div>
-    <h2>¿Que piloto logra mas rapido los mejores tiempos?</h2>
-       <object data="https://santisimone.github.io/infovis/TP1/RAWGreaphs.svg" type="image/svg+xml"></object>
-    <h2>¿Como evolucionaron los tiempos de vuelta a lo largo de estos 2 años?</h2>
-       <iframe title="Evolución de tiempos" aria-label="Line chart" id="datawrapper-chart-LvgVZ" src="https://datawrapper.dwcdn.net/LvgVZ/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="328" data-external="1"></iframe>
-       <script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
-  </body>
+<body>
+
+  <header>
+    <h1>Progresión Karting 2024-2025</h1>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>¿Cómo avanza la velocidad máxima según la temperatura de gases de escape?</h2>
+      <div class="card">
+        <div class="flourish-embed flourish-scatter" data-src="visualisation/26636747">
+          <script src="https://public.flourish.studio/resources/embed.js"></script>
+          <noscript><img src="https://public.flourish.studio/visualisation/26636747/thumbnail" width="100%" /></noscript>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>¿Qué piloto logra más rápido los mejores tiempos?</h2>
+      <div class="card">
+  <img src="https://santisimone.github.io/infovis/TP1/RAWGreaphs.svg"
+       alt="RAW Graphs"
+       style="width:100%; height:auto; border-radius:10px;" 
+       onerror="this.onerror=null; this.src='fallback.png';" />
+      </div>
+    </section>
+
+    <section>
+      <h2>¿Cómo evolucionaron los tiempos de vuelta en estos 2 años?</h2>
+      <div class="card">
+        <iframe title="Evolución de tiempos" aria-label="Line chart" id="datawrapper-chart-LvgVZ" src="https://datawrapper.dwcdn.net/LvgVZ/1/" scrolling="no"></iframe>
+        <script>
+          window.addEventListener("message", function(event) {
+            if (event.data["datawrapper-height"]) {
+              var iframes = document.querySelectorAll("iframe");
+              for (var key in event.data["datawrapper-height"]) {
+                for (var i = 0; i < iframes.length; i++) {
+                  if (iframes[i].contentWindow === event.source) {
+                    iframes[i].style.height = event.data["datawrapper-height"][key] + "px";
+                  }
+                }
+              }
+            }
+          });
+        </script>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 Karting Data Visualization — Santiago Simone
+  </footer>
+
+</body>
 </html>
